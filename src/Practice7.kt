@@ -21,10 +21,10 @@ class FoldablePhone(var folded : Boolean) : Phone(isScreenLightOn = folded) {
     }
 
     fun fold(){
-       isScreenLightOn = true
+       super.switchOn()
     }
     fun unFold(){
-        isScreenLightOn = false
+        super.switchOff()
     }
 }
 
