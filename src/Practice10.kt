@@ -6,10 +6,16 @@ data class Question<T>(
 enum class Difficulty{
     EASY, MEDIUM, HARD
 }
-fun main(){
+class Quiz{
     val question1 = Question<String>("cm of Assam","Himanta",Difficulty.MEDIUM)
     val question2 = Question<Boolean>("The sky is green",false,Difficulty.EASY)
     val question3 = Question<Int>("10/5",2,Difficulty.EASY)
-    println(question1.toString())
 
+    companion object StudentProgress{
+        var total : Int = 10
+        var answered : Int = 3
+    }
+}
+fun main(){
+    println("${Quiz.answered} of ${Quiz.total} answered")
 }
